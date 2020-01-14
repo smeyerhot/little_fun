@@ -1,0 +1,15 @@
+{
+    "spadenv": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-spade-react-rest-spadenv-203137-authRole",
+            "UnauthRoleArn": "arn:aws:iam::919697347729:role/amplify-spade-react-rest-spadenv-203137-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::919697347729:role/amplify-spade-react-rest-spadenv-203137-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-spade-react-rest-spadenv-203137-deployment",
+            "UnauthRoleName": "amplify-spade-react-rest-spadenv-203137-unauthRole",
+            "StackName": "amplify-spade-react-rest-spadenv-203137",
+            "StackId": "arn:aws:cloudformation:us-east-1:919697347729:stack/amplify-spade-react-rest-spadenv-203137/fc18cf10-16fe-11ea-8f85-0ad9172a6ca8",
+            "AmplifyAppId": "d2s1sqkopnuvbp"
+        }
+    }
+}

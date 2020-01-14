@@ -1,0 +1,34 @@
+{
+    "paths": [
+        {
+            "name": "/people",
+            "lambdaFunction": "peoplefunction",
+            "privacy": {
+                "open": true
+            }
+        }
+    ],
+    "resourceName": "peopleapi",
+    "apiName": "peopleapi",
+    "functionArns": [
+        {
+            "lambdaFunction": "peoplefunction"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-spade-react-rest-spadenv-203137-authRole",
+        "unAuthRoleName": "amplify-spade-react-rest-spadenv-203137-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "peoplefunction",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
