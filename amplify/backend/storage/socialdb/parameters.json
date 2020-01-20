@@ -1,0 +1,5 @@
+{
+    "tableName": "socialdb",
+    "partitionKeyName": "id",
+    "partitionKeyType": "N"
+}
