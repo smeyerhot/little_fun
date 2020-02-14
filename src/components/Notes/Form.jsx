@@ -22,7 +22,7 @@ class Form extends React.Component {
         <div {...css(styles.form)}>
           <MdAdd size={28} />
           <input
-            placeholder='Boggle Words'
+            placeholder='Please click me to add a note'
             {...css(styles.input)}
             onKeyPress={this.handleKeyPress}
             onChange={e => this.onChange(e)}
