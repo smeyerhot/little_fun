@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './BoggleBoard.css';
-import {boards,words} from './boards'
+import {boards,words} from './Boards'
 
 export default class Grid extends Component {
     constructor(props) {

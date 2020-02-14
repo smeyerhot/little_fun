@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './BoggleBoard.css';
 // import './ballgame.css';
 // import draw from './ballgame'
-import {boards,words} from './boards'
+
 import Node from './Node/Node';
 import {dijkstra, getNodesInShortestPathOrder} from './algorithms/dijkstra';
 // const BOARDS = boards;
