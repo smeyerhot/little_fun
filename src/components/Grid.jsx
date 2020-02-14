@@ -1,21 +1,22 @@
 import React, {Component} from 'react';
 import './BoggleBoard.css';
-import {boards,words} from './Boards'
+import {boards,words} from './boards'
 
 export default class Grid extends Component {
     constructor(props) {
       super(props);
 
       this.state = {
+        
         dim:[],
         boggle: []
       };
     }
     componentDidMount() {
-
+      const i = getRandomArbitrary(boards);
       
-      const boggle = getBoggleBoard();
-      const dim = getBoardDim();
+      const boggle = getBoggleBoard(i);
+      const dim = getBoardDim(i);
       this.setState({boggle, dim});
     }
 
@@ -60,14 +61,15 @@ export default class Grid extends Component {
 const getRandomArbitrary = (arr)  => {
   return Math.floor(Math.random() * arr.length);
 };
-const getBoardDim = () => {
-  const i = getRandomArbitrary(boards);
+const getBoardDim = (i) => {
+  // const i = getRandomArbitrary(boards);
+  // getRandomArbitrary(boards);
   const m = boards[i].length;
   const n = boards[i][0].length;
-  return [m,n]
+  return [m,n,i]
 }
-const getBoggleBoard = () => {
-  const i = getRandomArbitrary(boards);
+const getBoggleBoard = (i) => {
+  
   const m = boards[i].length;
   const n = boards[i][0].length;
 

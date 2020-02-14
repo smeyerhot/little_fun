@@ -1,15 +1,12 @@
 import React, {Component} from 'react';
 import Game from './components/Game';
 import BoggleBoard from './components/BoggleBoard'
-import logo from './logo.svg';
 import './App.css';
-import Amplify, { API } from 'aws-amplify';
-import awsconfig from './aws-exports';
 import { BrowserRouter } from 'react-router-dom';
-import People from './components/People';
-import Grid from './components/Grid'
+import NoteApp from './components/Notes/NoteApp';
+import Grid from './components/Grid';
+import Header from './components/HeaderComponent';
 
-Amplify.configure(awsconfig);
 
 
 
@@ -19,32 +16,31 @@ class App extends Component {
 
     this.state = {
       value: '',
-      age: '',
-      people: []
+      age: ''
+
     };
   }
-  // state = { people: [] }
-  async componentDidMount() {
-    const data = await API.get('peopleapi', '/people')
-    this.setState({people: data.people})
-  }
+
+
   render() {
     return (
       <BrowserRouter>
         <React.Fragment>
+          <Header/>
+          <NoteApp/>
           <Grid/>
           <div className ="wrap">
-          <h1 className="string">What's your name?</h1>
+          <h1 className="string">While you wait, please play yourself in a quick game of tic-tac-toe! </h1>
           <Game/>
           <h1 className="string">What's your name?</h1>
-          <input value={this.state.name} type="text" id="name" onChange={(e)=>{this.setState({name: e.target.value})}}/>
+          <input className="input" value={this.state.name} type="text" id="name" onChange={(e)=>{this.setState({name: e.target.value})}}/>
           <h1 className="string">How old are you?</h1>
-          <input  value={this.state.age} onChange={(e)=>{this.setState({age: e.target.value})}} type="text" id="age" />
+          <input className="input" value={this.state.age} onChange={(e)=>{this.setState({age: e.target.value})}} type="text" id="age" />
           <h1 className="string">Hi {this.state.name}! How are you today? You're {this.state.age} years old.</h1>
           </div>
             <BoggleBoard/>
 
-            <People/>
+
 
 
 

@@ -1,11 +1,12 @@
-import React, { Component } from 'react';
-import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle} from 'reactstrap';
+// import React, { Component } from 'react';
 
-<Switch>
-    <Route path='/home' component={HomePage} />
-    <Route exact path='/menu' component={() => <Menu dishes={this.state.dishes} />} />
-    <Route path='/menu/:dishId' component={DishWithId} />
-    <Route exact path='/contactus' component={Contact} />} />
-    <Route exact path='/aboutus' component={() => <About leaders={this.state.leaders} />} />
-    <Redirect to="/home" />
-</Switch>
+// export default function Main()  {
+//     return (
+
+
+// <Switch>
+// <Route exact path='/notes' component={NoteApp}/>
+// <Route path='/notes/:number' component={Note}/>
+// </Switch>
+// );
+// }

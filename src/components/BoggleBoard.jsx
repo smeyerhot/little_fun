@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './BoggleBoard.css';
 // import './ballgame.css';
 // import draw from './ballgame'
-import {boards,words} from './Boards'
+import {boards,words} from './boards'
 import Node from './Node/Node';
 import {dijkstra, getNodesInShortestPathOrder} from './algorithms/dijkstra';
 // const BOARDS = boards;
@@ -87,7 +87,7 @@ export default class BoggleBoard extends Component {
 
 
 
-        <button onClick={() => this.visualizeDijkstra()}>
+        <button className="game_button" onClick={() => this.visualizeDijkstra()}>
           Visualize The Algo
         </button>
         <div className="grid">
